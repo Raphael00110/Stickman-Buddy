@@ -1,0 +1,13 @@
+# required
+PyQt6
+numpy
+pyautogui
+pywin32
+ollama                  # local AI (default brain). Also install the Ollama app, then: ollama pull qwen2.5:0.5b
+pillow                  # only for tools/make_placeholder_gifs.py
+
+# optional
+anthropic               # only if you set BRAIN = "claude" in settings.py
+winsdk                  # real "now playing" info for the music features
+vosk                    # voice commands ("up" / "go back"), fully offline
+sounddevice             # microphone input for voice commands

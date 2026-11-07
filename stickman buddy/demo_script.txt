@@ -1,0 +1,15 @@
+
+say I can walk, jump and hang out on your windows.
+do parkour
+say I react to what you're doing, and I'm never boring.
+do cheer
+say I can even do karate!
+do karate
+say Want to hear a joke?
+do joke
+say And you can pick me up and throw me around.
+pose dangle 2
+do superhero
+do party
+say Goodbye judges! Thank you for watching!
+do wave

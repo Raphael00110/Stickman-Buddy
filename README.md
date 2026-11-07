@@ -84,9 +84,13 @@ The name `llama` is the project's internal backend setting for Ollama. The actua
 
 ### 4. Set up offline voice recognition (optional)
 
+<<<<<<< HEAD
 The quick way: run `python tools/get_vosk_model.py` and it downloads and installs the model for you.
 
 Or do it by hand: download the `vosk-model-small-en-us-0.15` model from:
+=======
+Download the `vosk-model-small-en-us-0.15` model from:
+>>>>>>> 2708f8c94c70e198811ffc6ef27c381c1bc52192
 
 https://alphacephei.com/vosk/models
 
@@ -99,6 +103,7 @@ models/
 
 Make sure Windows allows desktop applications to access your microphone.
 
+<<<<<<< HEAD
 Both voice features use your **Windows default recording device**, so they work without any setup. To check
 that your microphone works, run `python tools/mictest.py`: it lists your devices and records three seconds.
 
@@ -111,6 +116,15 @@ python src/main.py
 ```
 
 Replace `15` with the number from your own list.
+=======
+By default, voice input can use your system's default recording device. If your version supports the `STICKMAN_MIC_DEVICE` environment variable, you can select a specific device in PowerShell:
+
+```powershell
+$env:STICKMAN_MIC_DEVICE = "15"
+```
+
+Replace `15` with the appropriate microphone index on your computer.
+>>>>>>> 2708f8c94c70e198811ffc6ef27c381c1bc52192
 
 ### 5. Launch Stickman Buddy
 
@@ -122,6 +136,7 @@ python src/main.py
 
 Buddy should appear on your desktop!
 
+<<<<<<< HEAD
 ## Troubleshooting
 
 - **No sound effects, or the joke is silent:** run `python tools/soundtest.py`. It plays the drum roll, rimshot and laugh and tells you which step is failing. The sound files are generated automatically into `assets/sfx/` the first time you run the app.
@@ -129,6 +144,8 @@ Buddy should appear on your desktop!
 - **Voice can't hear you, or uses the wrong microphone:** run `python tools/mictest.py` (see step 4).
 - **Starting over with a fresh copy of the project:** some files are deliberately *not* stored in git, so copy them across by hand if you want to keep them: `models/` (the speech model), `assets/sfx/` (only if you added your own sounds), `stickman_memory.json` (your friendship level) and `anthropic_api_key.txt` (only if you use the Claude brain). Copy the new files *over* the old folder instead of deleting it first.
 
+=======
+>>>>>>> 2708f8c94c70e198811ffc6ef27c381c1bc52192
 ## Controls
 
 | Shortcut | Action |
@@ -147,8 +164,11 @@ Stickman Buddy uses PyQt6's event loop to update his animations and process inte
 
 His behavior system decides how he should respond to events, while the procedural animation system controls his movements and poses. The animation rig uses inverse kinematics to calculate arm and leg positions.
 
+<<<<<<< HEAD
 Visual effects (impacts, confetti, hearts, music notes and more) are drawn in code by `src/fx_art.py`, so nothing needs downloading. To replace one, put a transparent GIF named after the effect (for example `impact.gif`) in `assets/gifs/`.
 
+=======
+>>>>>>> 2708f8c94c70e198811ffc6ef27c381c1bc52192
 For AI conversations, Ollama runs the language model locally. AI requests are handled on background threads so the desktop interface can remain responsive.
 
 The AI can also suggest actions, but those actions are checked against a list of permitted behaviors before execution.
@@ -198,6 +218,7 @@ The project was inspired in part by Alan Becker's *Animator vs. Animation*, but 
 - Boss fight (???)
 - more performance optimization
 
+<<<<<<< HEAD
 ## License
 
 Stickman Buddy is released under the **GNU General Public License v3.0** (see [LICENSE](LICENSE)). It uses PyQt6, which is available under the GPL (or a commercial license), and the GPL is the straightforward way to stay compliant while sharing the source code.
@@ -206,6 +227,8 @@ The AI model and the speech model are downloaded separately and keep their own l
 
 Copyright (C) 2026 Raphael John.
 
+=======
+>>>>>>> 2708f8c94c70e198811ffc6ef27c381c1bc52192
 ---
 
 **Created by Raphael John (Code with RJ)**
